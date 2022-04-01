@@ -1,0 +1,15 @@
+<nz-graph nz-graph-zoom
+          [nzZoom]="0"
+          [nzAutoSize]="true"
+          [nzGraphData]="data"
+          nzRankDirection="TB"
+          class="graph"
+          xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <ng-container *nzGraphNode="let node">
+    <foreignObject x="0" y="0"  [attr.width]="node.width" [attr.height]="node.height">
+      <xhtml:div>
+        <div class="node">{{ node.id }}</div>
+      </xhtml:div>
+    </foreignObject>
+  </ng-container>
+</nz-graph>
